@@ -5,3 +5,15 @@
 .grass{
     background-color: #48AA73;
 }
+
+.pokecardContainer a {
+    text-decoration: none;
+}
+
+.pokecard {
+    box-shadow: 0;
+    transition: box-shadow 0.1s ease-in-out 0s;
+  }  
+  .pokecard:hover{
+    box-shadow: 0 0 6px #000;
+  }
