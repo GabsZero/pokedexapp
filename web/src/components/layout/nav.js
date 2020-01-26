@@ -1,7 +1,7 @@
-import React, {TextInput} from 'react'
+import React from 'react'
 import './nav.css'
 
-const Nav = () => {
+const Nav = ({setSearch, loadPokemons}) => {
     return (
         <div className="navigation">
             <div className="row">
@@ -10,10 +10,10 @@ const Nav = () => {
 
                 </div>
                 <div className="col-3 mt-4 text-left">
-                    <input type="text" className="form-control form-control-lg" />
+                    <input onChange={(e) => setSearch(e.currentTarget.value)} type="text" className="form-control form-control-lg" />
                 </div>
                 <div className="col-1 mt-4  text-left">
-                    <button className="btn btn-lg btn-success">Oi</button>
+                    <button onClick={loadPokemons} className="btn btn-lg btn-success">Oi</button>
                 </div>
             </div>
         </div>
