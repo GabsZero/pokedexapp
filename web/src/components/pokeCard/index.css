@@ -1,9 +1,21 @@
 
-.poison{
+.Poison{
     background-color: #966FB0;
+    color: #fff;
 }
-.grass{
+.Grass{
     background-color: #48AA73;
+    color: #fff;
+}
+
+.Fire{
+    background-color: #fd7d24;
+    color: #fff;
+}
+
+.Water{
+    background-color: #4592c4;
+    color: #fff;
 }
 
 .pokecardContainer a {
