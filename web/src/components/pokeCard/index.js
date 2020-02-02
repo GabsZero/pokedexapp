@@ -5,6 +5,12 @@ import './index.css'
 
 const PokeCard = ({pokemons, search}) => {
     
+    //if no mons, show something
+    if(pokemons.length === 0) return (
+        <div className="text-center mt-5">
+            <h4>No pokemons to show</h4>
+        </div>
+    )
 
     return (
         <>
