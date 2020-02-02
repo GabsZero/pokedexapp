@@ -1,10 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect } from 'react'
 
-const PokeSingle = (props) => {
-    const [pokeNumber, setPokeNumber] = useState('')
-
+const PokeSingle = ({ number }) => {
     return (
-        <h1>PokeSingle</h1>
+        <h1>Number passed is {number}</h1>
     )
 }
 

@@ -48,12 +48,15 @@ function App() {
               </div>
             </>
           )} />
-          <Route path="/pokemon">
-            <>
-              <div className="container">
-                <PokeSingle />
-              </div>
-            </>
+          <Route path="/pokemon/:number" render={({match}) => {
+            return (
+              <>
+                <div className="container">
+                  <PokeSingle number={match.params.number} />
+                </div>
+              </>
+            )
+          }}>
           </Route>
         </Switch>
       </Router>
