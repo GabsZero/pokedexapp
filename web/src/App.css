@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-.container{
-  width: 1280px;
-  padding: auto;
-  margin: auto;
-}
-
 body, input, button{
   font-family: Roboto, sans-serif;
 }
