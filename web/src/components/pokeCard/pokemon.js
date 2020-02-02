@@ -6,7 +6,7 @@ import {
 const Pokemon = ({name, number, avatar_url, types}) => {
     return (
         <div className="pokecardContainer col-3 mt-4">
-            <Link to="/pokemon">
+            <Link to={`/pokemon/${number}`}>
                 <div className="pokecard card" style={{width: 250}}>
                     <img className="card-img-top" src={avatar_url} alt="pokemon" />
                     <div className="card-body text-center">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from './services/api'
 import PokeCard from './components/pokeCard'
+import PokeSingle from './components/PokeSingle'
 import Nav from './components/layout/nav'
 import {
   BrowserRouter as Router,
@@ -48,7 +49,11 @@ function App() {
             </>
           )} />
           <Route path="/pokemon">
-           <h1>Pokemon</h1>
+            <>
+              <div className="container">
+                <PokeSingle />
+              </div>
+            </>
           </Route>
         </Switch>
       </Router>
