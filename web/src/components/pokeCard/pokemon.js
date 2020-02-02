@@ -1,9 +1,12 @@
 import React from 'react'
+import {
+    Link
+  } from "react-router-dom";
 
 const Pokemon = ({name, number, avatar_url, types}) => {
     return (
         <div className="pokecardContainer col-3 mt-4">
-            <a href="#">
+            <Link to="/pokemon">
                 <div className="pokecard card" style={{width: 250}}>
                     <img className="card-img-top" src={avatar_url} alt="pokemon" />
                     <div className="card-body text-center">
@@ -19,7 +22,7 @@ const Pokemon = ({name, number, avatar_url, types}) => {
                         }
                     </div>
                 </div>
-            </a>
+            </Link>
         </div>
     )
 }

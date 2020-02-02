@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import api from './services/api'
 import PokeCard from './components/pokeCard'
 import Nav from './components/layout/nav'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 import './App.css'
 
@@ -13,7 +18,7 @@ function App() {
       let pokeResponse = null
       if(search){
         pokeResponse = response.data.pokemons.filter(pokemon => {
-          return pokemon.name === search
+          return pokemon.name.toLowerCase() === search
         })
 
       } else {
@@ -32,10 +37,21 @@ function App() {
       <div className="text-center">
         <h1>Pokedex</h1>
       </div>
-      <Nav setSearch={setSearch} loadPokemons={loadPokemons} />
-      <div className="container">
-        <PokeCard pokemons={pokemons} search={search} />
-      </div>
+      <Router>
+        <Switch>
+          <Route path="/" exact={true} render={() => (
+            <>
+              <Nav setSearch={setSearch} loadPokemons={loadPokemons} />
+              <div className="container">
+                <PokeCard pokemons={pokemons} search={search} />
+              </div>
+            </>
+          )} />
+          <Route path="/pokemon">
+           <h1>Pokemon</h1>
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 }
