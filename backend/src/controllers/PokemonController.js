@@ -1,4 +1,5 @@
 const Pokemon = require('../models/Pokemon')
+const axios = require('axios')
 
 module.exports = {
     async index(req, res){
@@ -14,9 +15,17 @@ module.exports = {
             return comparison
         })
 
-        console.log(pokemons)
         return res.json({
             pokemons
+        })
+    },
+
+    async getPokemon(req, res){
+        const pokemonData = await axios.get(`https://pokeapi.co/api/v2/pokemon/${req.params.number}`)
+
+        console.log(pokemonData)
+        return res.json({
+            result: pokemonData.data
         })
     }
 }

@@ -14,7 +14,7 @@ const Nav = ({setSearch, loadPokemons}) => {
                         <input onChange={(e) => setSearch(e.currentTarget.value.toLowerCase())} type="text" className="form-control form-control-lg" />
                     </div>
                     <div className="col-1 mt-4  text-left">
-                        <button onClick={loadPokemons} className="btn btn-lg btn-success">Oi</button>
+                        <button onClick={loadPokemons} className="btn btn-lg btn-success">FIND</button>
                     </div>
                 </div>
             </div>

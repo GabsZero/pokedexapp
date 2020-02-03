@@ -3,9 +3,9 @@ import {
     Link
   } from "react-router-dom";
 
-const Pokemon = ({name, number, avatar_url, types}) => {
+const Pokemon = ({name, number, avatar_url, types, key}) => {
     return (
-        <div className="pokecardContainer col l3 m3 s12 mt-4">
+        <div key={key} className="pokecardContainer col l3 m3 s12 mt-4">
             <Link to={`/pokemon/${number}`}>
                 <div className="pokecard card" style={{width: 250}}>
                     <img className="card-img-top" src={avatar_url} alt="pokemon" />

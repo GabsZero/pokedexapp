@@ -1,0 +1,19 @@
+.box{
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.box-img{
+    -webkit-box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 37px 0px rgba(0,0,0,0.75);
+    flex: 2;
+}
+
+.box-name{
+    background-color: crimson;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #ffffff;
+}
